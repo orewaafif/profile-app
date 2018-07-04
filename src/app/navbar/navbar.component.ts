@@ -9,7 +9,7 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
-  show = false;
+  show = true;
 
   toggleCollapse() {
     this.show = !this.show;
