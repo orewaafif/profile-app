@@ -9,6 +9,12 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
+  show = true;
+
+  toggleCollapse() {
+    this.show = !this.show;
+  }
+
   ngOnInit() {
   }
 
