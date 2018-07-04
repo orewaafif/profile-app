@@ -8,8 +8,6 @@ import { AppRoutingModule } from './/app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
-import { DxButtonModule } from 'devextreme-angular';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,8 +18,7 @@ import { DxButtonModule } from 'devextreme-angular';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    DxButtonModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
