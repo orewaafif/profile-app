@@ -1,14 +1,12 @@
-<div class="container-fluid">
+<div class="merepek">
   <h2>New phone, who dis?</h2>
 </div>
 <div class="container">
-  <ul *ngFor= "let c of conData" class="primary-list">
-    <li>{{c.name}}
-      <ul class="sub-list">
-        <li>
-          {{c.email}}
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <div *ngFor= "let c of conData" class="card" routerLink="/contact/:id/view">
+    <h5 class="card-header">{{c.name}}</h5>
+    <div class="card-body">
+      <p class="card-text">{{c.email}}</p>
+      <p class="card-text">{{c.company}}</p>
+    </div>
+  </div>
 </div>
