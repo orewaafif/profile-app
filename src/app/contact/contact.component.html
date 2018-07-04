@@ -1,3 +1,14 @@
 <div class="container-fluid">
   <h2>New phone, who dis?</h2>
 </div>
+<div class="container">
+  <ul *ngFor= "let c of conData" class="primary-list">
+    <li>{{c.name}}
+      <ul class="sub-list">
+        <li>
+          {{c.email}}
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

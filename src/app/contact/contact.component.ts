@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Contacts } from '../contacts';
+import { CONTACTS } from '../temp-contacts';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  conData = CONTACTS;
+
   constructor() { }
 
   ngOnInit() {
+    console.warn(this.conData);
+
   }
 
 }
