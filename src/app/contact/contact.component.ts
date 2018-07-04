@@ -14,7 +14,6 @@ export class ContactComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.warn(this.conData);
 
   }
 
