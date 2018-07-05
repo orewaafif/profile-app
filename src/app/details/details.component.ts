@@ -34,13 +34,8 @@ export class DetailsComponent implements OnInit {
     this.location.back();
   }
 
-  showModal(): void {
-    this.show = true;
-  }
-
-  hideModal(): void {
-    console.log('Show: ' , this.show);
-    this.show = false;
+  toggleModal(): void {
+    this.show = !this.show;
   }
 
 }

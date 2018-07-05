@@ -15,8 +15,8 @@ export class ModalDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-  hideModal(): void {
-    this.detailsComponent.hideModal();
+  toggleModal(): void {
+    this.detailsComponent.toggleModal();
   }
 
 }

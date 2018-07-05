@@ -4,7 +4,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="close" aria-label="Close">
+          <button type="button" class="close" aria-label="Close" (click)="toggleModal()">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -15,7 +15,7 @@
           <button type="button" class="btn btn-primary">
             Save changes
           </button>
-          <button type="button" class="btn btn-secondary" (click)="hideModal()">
+          <button type="button" class="btn btn-secondary" (click)="toggleModal()">
             Close
           </button>
         </div>
@@ -23,7 +23,3 @@
     </div>
   </div>
 </div>
-
-<p>
-  show hide model works!
-</p>
