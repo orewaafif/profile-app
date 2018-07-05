@@ -1,0 +1,13 @@
+.bg-modal{
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+
+.modal{
+    display: block !important;
+}

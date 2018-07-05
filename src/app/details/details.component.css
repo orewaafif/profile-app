@@ -11,6 +11,7 @@
     padding-top: 24px;
 }
 
-btn{
-    float: right;
+.btn-grey{
+    margin-left: 8px;
 }
+
