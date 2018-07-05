@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DetailsComponent } from '../details/details.component';
 
 @Component({
   selector: 'app-modal-details',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private detailsComponent: DetailsComponent
+  ) { }
 
   ngOnInit() {
+  }
+
+  hideModal(): void {
+    this.detailsComponent.hideModal();
   }
 
 }
