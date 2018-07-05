@@ -1,0 +1,16 @@
+.card-title{
+    padding-left: 8px;
+}
+
+.card-img-top{
+    height: 200px;
+    width: auto;
+}
+
+.col-xs-8{
+    padding-top: 24px;
+}
+
+btn{
+    float: right;
+}

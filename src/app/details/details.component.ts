@@ -29,4 +29,8 @@ export class DetailsComponent implements OnInit {
     this.selected = this.contactService.getContact(id);
   }
 
+  goBack(): void {
+    this.location.back();
+  }
+
 }

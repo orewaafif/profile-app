@@ -8,6 +8,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DetailsComponent } from './details/details.component';
+import { ModalDetailsComponent } from './modal-details/modal-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DetailsComponent } from './details/details.component';
     ContactComponent,
     NotFoundComponent,
     NavbarComponent,
-    DetailsComponent
+    DetailsComponent,
+    ModalDetailsComponent
   ],
   imports: [
     BrowserModule,
