@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DetailsComponent } from '../details/details.component';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Contacts } from '../contacts';
+import { ContactsService } from '../contacts.service';
 
 @Component({
   selector: 'app-modal-details',
@@ -21,7 +22,8 @@ export class ModalDetailsComponent implements OnInit {
   });
 
   constructor(
-    private detailsComponent: DetailsComponent
+    private detailsComponent: DetailsComponent,
+    private contactService: ContactsService
   ) { }
 
   ngOnInit() {
@@ -33,6 +35,11 @@ export class ModalDetailsComponent implements OnInit {
 
   saveForm(): void {
     this.detailsComponent.selected = this.contactForm.value;
+    this.contactService.updateContact(
+      this.contact.id,
+      this.contactForm.value);
+    console.log('id',this.contact.id);
+    console.log('test');
     this.toggleModal();
   }
 

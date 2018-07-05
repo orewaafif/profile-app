@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Contacts } from '../contacts';
-import { CONTACTS } from '../temp-contacts';
+import { ContactsService } from '../contacts.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,9 +8,11 @@ import { CONTACTS } from '../temp-contacts';
 })
 export class ContactComponent implements OnInit {
 
-  conData = this.sortArrayBy(CONTACTS, 'name');
+  contacts = this.sortArrayBy(this.contactService.getContacts(), 'name');
 
-  constructor() { }
+  constructor(
+    private contactService: ContactsService
+  ) { }
 
   sortArrayBy(array: any[], args: string) {
     return array.sort((a, b) => a[args] > b [args] ? 1 : -1 );
