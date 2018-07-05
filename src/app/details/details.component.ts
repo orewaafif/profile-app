@@ -19,7 +19,7 @@ export class DetailsComponent implements OnInit {
   ) { }
 
   selected: Contacts;
-  public show = false;
+  show = false;
 
   ngOnInit() {
     this.getContact();
