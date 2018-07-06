@@ -14,9 +14,8 @@ export class ContactComponent implements OnInit {
 
   getContacts(){
     this.contactService.getContacts().then(
-      (r) => {
-        this.contacts = r;
-        console.log('r: ', r);
+      (result) => {
+        this.contacts = result;
       });
   }
 
