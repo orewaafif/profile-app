@@ -34,12 +34,16 @@ export class ModalDetailsComponent implements OnInit {
   }
 
   saveForm(): void {
-    this.contactService.updateContact(
-      this.contact.id,
-      this.contactForm.value
-    );
-    this.toggleModal();
-  
+    if(this.contactForm.valid){
+      this.contactService.updateContact(
+        this.contact.id,
+        this.contactForm.value
+      );
+      this.toggleModal();
+    }
+    else{
+      console.warn("Data is invalid");  
+    }  
   }
 
 }
