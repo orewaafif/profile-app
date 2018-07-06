@@ -18,12 +18,14 @@ export class ContactsService {
     return this.contacts;
   }
 
-  updateContact(id: number, update: Contacts): void{
-    this.getContact(id).name = update.name;
-    this.getContact(id).email = update.email;
-    this.getContact(id).phone = update.phone;
-    this.getContact(id).company = update.company;
-    this.getContact(id).address = update.address;
+  updateContact(id: number, update: Contacts){
+    
+    this.contacts.map( c => {
+      if ( c.id === id ) {
+        Object.assign(c, update)
+        return c
+      }
+    })
   }
 
   constructor() { }
