@@ -42,7 +42,7 @@ export class ModalDetailsComponent implements OnInit {
       this.toggleModal();
     }
     else{
-      console.warn("Data is invalid");  
+      alert("You have an invalid field");  
     }  
   }
 

@@ -19,7 +19,7 @@
         <div class="modal-body">
           <!-- <p>Modal body text goes here.</p> -->
 
-          <div [formGroup]="contactForm" >
+          <form [formGroup]="contactForm" (keyup.enter)="saveForm()">
             <div class="form-group">
               <label>Name:</label>
               <input 
@@ -76,7 +76,7 @@
                 address field cannot be empty
               </label>
             </fieldset>
-          </div>
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button"
