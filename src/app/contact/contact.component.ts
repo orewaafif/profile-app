@@ -15,7 +15,7 @@ export class ContactComponent implements OnInit {
   getContacts(){
     this.contactService.getContacts().then(
       (result) => {
-        this.contacts = result;
+        this.contacts = this.sortArrayBy(result, 'name');
       });
   }
 
@@ -24,7 +24,7 @@ export class ContactComponent implements OnInit {
   ) { }
 
   sortArrayBy(array: any[], args: string) {
-    return array.sort((a, b) => a[args] > b [args] ? 1 : -1 );
+    return array.sort((a, b) => a[args] > b [args] ? 0 : -1 );
   }
 
   ngOnInit() {
