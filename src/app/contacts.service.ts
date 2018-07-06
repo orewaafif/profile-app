@@ -10,12 +10,14 @@ export class ContactsService {
 
   contacts: Contacts[] = CONTACTS;
 
-  getContact(id: number): Contacts {
-    return this.contacts.find(contact => contact.id === id);
+  getContact(id: number): Promise<Contacts> {
+    return Promise.resolve().then(()=>{
+     return this.contacts.find(contact => contact.id === id);
+    })
   }
 
-  getContacts(): Contacts[] {
-    return this.contacts;
+  getContacts(): Promise<Contacts[]> {
+    return Promise.resolve(this.contacts);
   }
 
   updateContact(id: number, update: Contacts){

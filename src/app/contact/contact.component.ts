@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactsService } from '../contacts.service';
+import { Contacts } from '../contacts';
 
 @Component({
   selector: 'app-contact',
@@ -8,7 +9,16 @@ import { ContactsService } from '../contacts.service';
 })
 export class ContactComponent implements OnInit {
 
-  contacts = this.sortArrayBy(this.contactService.getContacts(), 'name');
+  data: Promise<Contacts[]>;
+  contacts: Contacts[];
+
+  getContacts(){
+    this.contactService.getContacts().then(
+      (r) => {
+        this.contacts = r;
+        console.log('r: ', r);
+      });
+  }
 
   constructor(
     private contactService: ContactsService
@@ -19,7 +29,8 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.getContacts();
+    console.log(this.contactService.getContacts());
   }
 
 }

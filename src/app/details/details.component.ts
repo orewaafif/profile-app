@@ -27,7 +27,11 @@ export class DetailsComponent implements OnInit {
 
   getContact(): void  {
     const id = +this.routes.snapshot.paramMap.get('id');
-    this.selected = this.contactService.getContact(id);
+    console.warn('id', id);
+    this.contactService.getContact(id).then((con)=>{
+     this.selected = con;
+   })
+    console.warn('contact', this.contactService.getContact(id));
   }
 
   goBack(): void {
