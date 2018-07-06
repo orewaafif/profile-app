@@ -21,13 +21,15 @@ export class ContactsService {
   }
 
   updateContact(id: number, update: Promise<Contacts>){
-    
-    this.contacts.map( c => {
-      if ( c.id === id ) {
-        Object.assign(c, update)
-        return c
-      }
+    this.getContacts().then((array)=>{
+      array.map( c => {
+        if ( c.id === id ) {
+          Object.assign(c, update)
+          return c
+        }
+      })
     })
+    
   }
 
   constructor() { }
