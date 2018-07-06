@@ -10,4 +10,5 @@
 
 .modal{
     display: block !important;
+    overflow-y: scroll;
 }
