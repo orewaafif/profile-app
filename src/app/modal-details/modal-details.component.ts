@@ -15,10 +15,10 @@ export class ModalDetailsComponent implements OnInit {
 
   contactForm = new FormGroup({
     name : new FormControl(this.contact.name, Validators.required),
-    email : new FormControl(this.contact.email),
-    phone : new FormControl(this.contact.phone),
-    company : new FormControl(this.contact.company),
-    address : new FormControl(this.contact.address),
+    email : new FormControl(this.contact.email, Validators.required),
+    phone : new FormControl(this.contact.phone, Validators.required),
+    company : new FormControl(this.contact.company, Validators.required),
+    address : new FormControl(this.contact.address, Validators.required)
   });
 
   constructor(
@@ -34,13 +34,12 @@ export class ModalDetailsComponent implements OnInit {
   }
 
   saveForm(): void {
-    this.detailsComponent.selected = this.contactForm.value;
     this.contactService.updateContact(
       this.contact.id,
-      this.contactForm.value);
-    console.log('id',this.contact.id);
-    console.log('test');
+      this.contactForm.value
+    );
     this.toggleModal();
+  
   }
 
 }
