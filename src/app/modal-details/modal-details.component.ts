@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DetailsComponent } from '../details/details.component';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Contacts } from '../contacts';
 import { ContactsService } from '../contacts.service';
 
@@ -14,7 +14,7 @@ export class ModalDetailsComponent implements OnInit {
   contact = this.detailsComponent.selected;
 
   contactForm = new FormGroup({
-    name : new FormControl(this.contact.name),
+    name : new FormControl(this.contact.name, Validators.required),
     email : new FormControl(this.contact.email),
     phone : new FormControl(this.contact.phone),
     company : new FormControl(this.contact.company),
