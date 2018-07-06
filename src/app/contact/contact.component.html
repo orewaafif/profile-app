@@ -2,11 +2,16 @@
   <h2>New phone, who dis?</h2>
 </div>
 <div class="container">
-  <div *ngFor= "let c of contacts" class="card">
-    <h5 class="card-header" routerLink="/contact/{{c.id}}/view">{{c.name}}</h5>
-    <div class="card-body">
-      <p class="card-text">{{c.email}}</p>
-      <p class="card-text">{{c.company}}</p>
+  <div class="row">
+    <div class="col-sm" *ngFor= "let c of contacts">
+      <div class="card">
+        <h5 class="card-header" routerLink="/contact/{{c.id}}/view">{{c.name}}</h5>
+        <div class="card-body">
+          <p class="card-text">{{c.email}}</p>
+          <p class="card-text">{{c.company}}</p>
+        </div>
+      </div>
     </div>
   </div>
+  
 </div>
