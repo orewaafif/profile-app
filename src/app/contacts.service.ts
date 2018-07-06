@@ -20,7 +20,7 @@ export class ContactsService {
     return Promise.resolve(this.contacts);
   }
 
-  updateContact(id: number, update: Contacts){
+  updateContact(id: number, update: Promise<Contacts>){
     
     this.contacts.map( c => {
       if ( c.id === id ) {
